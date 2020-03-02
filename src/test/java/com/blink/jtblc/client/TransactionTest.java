@@ -42,7 +42,8 @@ public class TransactionTest {
 		getTx();
 
 		// 获取SWTC余额
-		getSwtcBleans();
+		//getSwtcBleans();
+		getSwtcBalances();
 
 		// 获取账号交易列表
 		getTxs();
@@ -109,7 +110,7 @@ public class TransactionTest {
 	 * 
 	 * @return
 	 */
-	public static AccountData getSwtcBleans() {
+	public static AccountData getSwtcBalances() {
 		String account = "j3UcBBbes7HFgmTLmGkEQQShM2jdHbdGAe";
 		AccountInfo bean = remote.requestAccountInfo(account, null, null);
 		System.out.println("j3UcBBbes7HFgmTLmGkEQQShM2jdHbdGAe---SWTC余额：" + bean.getAccountData().getBalance());
